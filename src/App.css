@@ -1,38 +1,267 @@
-.App {
-  text-align: center;
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo p {
+  color: #3a68b8;
+  font-size: 20px;
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+.nav-links li {
+  color: #fff;
+}
+.btn {
+  color: #fff;
+  background-color: #3a68b8;
+  padding: 15px 30px;
+  width: fit-content;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.menu-open {
+  display: none;
+  color: #fff;
+  font-size: 35px;
+}
+.close {
+  display: none;
+}
+.showcase {
+  display: flex;
+  gap: 50px;
+}
+.showcase img {
+  width: 50%;
+}
+.showcase-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: center;
+}
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+.showcase-content p:nth-child(1) {
+  color: #3a68b8;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+h4 {
+  color: rgb(182, 183, 187);
+  font-weight: 400;
+  line-height: 160%;
+  font-size: 18px;
+}
+h1 {
+color: #FFF;
+font-size: 50px;
+line-height: 130%;
+}
+.sponsor {
+  display: flex;
+  justify-content: space-between;
+  margin: 90px 0;
+}
+.sponsor img {
+  width: 200px;
+}
+.section1 {
+  display: flex;
+  gap: 30px;
+  margin: 100px 0;
+}
+.section1 img {
+  width: 50%;
+}
+.section1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: center;
+}
+h3 {
+  color: rgb(182, 183, 187);
+  font-weight: 600;
+  line-height: 125%;
+  font-size: 25px;
+}
+.cards {
+  display: flex;
+  gap: 30px;
+}
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.20);
+  padding: 10px;
+  gap: 30px;
+}
+.section2 {
+  display: flex;
+  gap: 50px;
+  margin: 100px 0;
+}
+.section2 img {
+  width: 50%;
+}
+.section2 div {
+  align-self: center;
+}
+.footerlogo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+.address {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+h2 {
+  color: #FFF;
+  font-weight: 500;
+}
+.lastColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 25%;
+}
+.lastColumn p {
+  color: #FFF;
+  font-weight: 500;
+}
+.social {
+  display: flex;
+  color: rgb(182, 183, 187);
+  gap: 15px;
+  font-size: 20px;
+}
+footer {
+  display: flex;
+  gap: 30px;
+  margin: 150px 0;
+}
+.firstColumn {
+  width: 25%;
+}
+select {
+  background-color: #2C3647;
+  color: #FFF;
+  border: none;
+  width: 90px;
+}
+#check {
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 930px) {
+  .nav-links {
+    position: absolute;
+    top: 0;
+    transition: 0.3s;
+    transform: translate(100%);
+    align-items: center;
+    position: fixed;
+    width: 60%;
+    right: 0;
+    flex-direction: column;
+    height: 100vh; 
+    background-color: #3a68b8;
+    padding-top: 0px;
+    gap: 30px;
+    padding-right: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .menu-open {
+    display: block;
+  }
+  .close {
+    display: block;
+    align-self: self-start;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: #2C3647;
+  }
+  footer {
+    flex-wrap: wrap;
+  }
+  .firstColumn {
+    width: unset;
+  }
+  .lastColumn {
+    width: unset;
+  }
+  .section2 {
+    flex-direction: column;
+  }
+  .section2 img {
+    width: 70%;
+    align-self: center;
+  }
+  .section1 {
+    flex-direction: column;
+    gap: 70px;
+  }
+  .section1 img {
+    width: 70%;
+    align-self: center;
+  }
+  .sponsor {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .showcase {
+    flex-direction: column-reverse;
+  }
+  .showcase img {
+    align-self: center;
+  }
+  #check:checked ~ .nav-links {
+    transform: translate(0);
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  h1 {
+    font-size: 30px;
   }
 }
